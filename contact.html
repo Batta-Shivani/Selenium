@@ -1,0 +1,159 @@
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    input[type=text], select, textarea {
+      width: 50%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+input[type=submit] {
+  background-color: lightgrey;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+input[type=submit]:hover {
+  background-color: gray;
+}
+    input[type=email], select, textarea {
+      width: 50%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    .container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+    </style>
+</head>
+<body>
+<h1><i><b>My contact information:</b></i></h1>
+<div class="container">
+<form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+<label for ="fname">First name:</label>
+</div>
+<div class="col-75">
+<input type="text" id ="fname" name ="fname" placeholder="Your name..">
+</div>
+</div>
+<div class="row">
+  <div class="col-25">
+<label for ="lname">Last name:</label>
+</div>
+<div class="col-75">
+<input type="text" id ="lname" name="lname" placeholder="Your last name..">
+</div>
+</div>
+<div class="row">
+  <div class="col-25">
+<label for ="Gender">Choose gender:</label><br>
+</div>
+<div class="col-75">
+<input type="radio" id="Male" name="Gender" value ="Male">
+<label for="Male">Male</label><br>
+<input type="radio" id="FeMale" name="Gender" value ="FeMale">
+<label for="FeMale">FeMale</label><br>
+</div>
+</div>
+<div class="row">
+  <div class="col-25">
+<label for="email">Enter your email:</label>
+</div>
+<div class="col-75">
+<input type="email" id="email" name="email" placeholder="Your gmail..."><br></br>
+</div>
+</div>
+<div class="row">
+  <div class="col-25">
+<label for="Phone">Phone number:  </label>
+</div>
+<div class="col-75">
+<input type="text" id="Phone" name="Phone" placeholder="Your phone..."><br></br>
+</div>
+</div>
+<div class="row">
+  <div class="col-25">
+<label for ="country">Choose country:</label>
+</div>
+<div class="col-75">
+<select name="country" id ="country">
+  <option value=""></option>
+<option value="India">India</option>
+<option value="Japan">Japan</option>
+<option value="korea">korea</option>
+</select><br></br>
+</div>
+</div>
+<div class="row">
+  <div class="col-25">
+<label for ="State">Choose State:</label>
+</div>
+<div class="col-75">
+<select name="State" id ="State">
+  <option value=""></option>
+<option value="Andhra pradesh">Andhra pradesh</option>
+<option value="Telangana">Telangana</option>
+<option value="Tamilnadu">Tamilnadu</option>
+</select><br></br>
+</div>
+</div>
+<div class="row">
+  <div class="col-25">
+<label for ="hobby">Choose hobby:</label><br>
+</div>
+<div class="col-75">
+<input type="checkbox" name="hobby1" value="Music">
+<label for ="hobby1">Listening to music</label><br>
+<div class="col-75">
+<input type="checkbox" name="hobby" value="Yoga">
+<label for ="hobby2">Doing yoga</label><br>
+<div class="col-75">
+<input type="submit" value="Submit">
+</div>
+</div>
+</form>
+</body>
+</html>
